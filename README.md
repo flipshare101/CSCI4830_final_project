@@ -9,3 +9,5 @@ python_code.py is the script used to generate the graphs in our paper.
 python_object_files contains the model performance data in `pickle` object files.
 
 model_weights contains the model weights for the models.
+
+example_scenes contains manim code to generate the visuals used in the final video.

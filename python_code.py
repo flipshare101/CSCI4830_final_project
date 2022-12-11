@@ -1,11 +1,10 @@
 import pickle
 import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
-import csv
 import numpy as np
 x = []
 y = []
-with open('python_object_files/all.obj', 'rb') as f:
+with open('python_object_files/nopretrain.obj', 'rb') as f:
 # Deserialize the object and store it in a variable
     my_object = pickle.load(f)
     for i in range(len(my_object)):
@@ -20,7 +19,7 @@ with open('python_object_files/all.obj', 'rb') as f:
     plt.plot(x, p(x), color = "r")
     plt.xlabel('Iteration number')
     plt.ylabel('Score')
-    plt.title('all optimizations', fontsize = 10)
+    plt.title('No Pretrain', fontsize = 10)
     r2 = r2_score(x, y)
-    plt.annotate('R2: ' + str(r2_score(y, p(x))), xy = (69, 900))
+    plt.annotate('R2: ' + str(r2_score(y, p(x))), xy = (69, 750))
     plt.show()
